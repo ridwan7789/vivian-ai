@@ -4,6 +4,7 @@ import { toast } from 'sonner';
 import { streamVivianChat } from '@/lib/vivianChat';
 import vivianCoin from '@/assets/vivian-coin.jpg';
 import StarParticles from './StarParticles';
+import VivianVoiceButton from './VivianVoiceButton';
 
 interface Message {
   id: number;
@@ -167,7 +168,15 @@ const ChatSection = () => {
                       message.isVivian ? 'chat-bubble-vivian' : 'chat-bubble-user'
                     }`}
                   >
-                    <p className="text-sm text-foreground/90">{message.text}</p>
+                    <div className="flex items-start gap-2">
+                      <p className="text-sm text-foreground/90 flex-1">{message.text}</p>
+                      {message.isVivian && (
+                        <VivianVoiceButton 
+                          text={message.text} 
+                          className="flex-shrink-0 mt-0.5"
+                        />
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}
