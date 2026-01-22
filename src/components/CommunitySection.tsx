@@ -3,22 +3,16 @@ import vivianFull from '@/assets/vivian-full.jpg';
 
 const socials = [
   {
-    name: "Twitter",
+    name: "X",
     icon: "𝕏",
-    href: "#",
+    href: "https://x.com/Vivipump",
     description: "Follow for updates",
   },
   {
     name: "Telegram",
     icon: "✈️",
-    href: "#",
+    href: "https://t.me/vivianpump",
     description: "Join the family",
-  },
-  {
-    name: "Discord",
-    icon: "💬",
-    href: "#",
-    description: "Chat with us",
   },
 ];
 
