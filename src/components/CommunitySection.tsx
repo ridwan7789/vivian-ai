@@ -1,5 +1,5 @@
 import { ExternalLink } from 'lucide-react';
-import vivianHappy from '@/assets/vivian-happy.jpg';
+import vivianFull from '@/assets/vivian-full.jpg';
 
 const socials = [
   {
@@ -27,19 +27,17 @@ const CommunitySection = () => {
     <section id="community" className="relative py-24 md:py-32">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
+          {/* Image - Full body Vivian */}
           <div className="relative flex justify-center order-2 lg:order-1">
             <div className="relative">
               {/* Glow */}
               <div className="absolute inset-0 bg-vivian-pink/20 blur-[60px] rounded-full scale-110" />
               
-              <div className="golden-frame relative z-10">
-                <img 
-                  src={vivianHappy}
-                  alt="Vivian smiling"
-                  className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover"
-                />
-              </div>
+              <img 
+                src={vivianFull}
+                alt="Vivian full illustration"
+                className="relative z-10 w-72 md:w-80 h-auto object-contain animate-float"
+              />
             </div>
           </div>
 
