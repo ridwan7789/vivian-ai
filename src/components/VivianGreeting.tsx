@@ -3,7 +3,7 @@ import { Volume2, X } from 'lucide-react';
 import { speakVivian } from '@/lib/vivianSpeak';
 import vivianCoin from '@/assets/vivian-coin.jpg';
 
-const GREETING_TEXT = "Hi... I'm Vivian. I've been waiting for you.";
+const GREETING_TEXT = "Vivian's Message to Holder My dear holder...Thank you for choosing Vivian 🤍Keep holding on to Vivian, don't let go...Even though the journey is slow, let's enjoy every step together towards ATH ✨";
 const STORAGE_KEY = 'vivian-greeted';
 
 const VivianGreeting = () => {
@@ -90,14 +90,14 @@ const VivianGreeting = () => {
               </div>
               <div className="flex-1">
                 <p className="text-sm text-foreground/90 mb-2">
-                  ✨ Vivian ingin menyapamu...
+                  ✨ Vivian wants to say hello to you...
                 </p>
                 <button
                   onClick={playGreeting}
                   className="flex items-center gap-2 px-4 py-2 bg-gradient-magical rounded-full text-white text-sm font-medium hover:scale-105 transition-transform glow-violet"
                 >
                   <Volume2 className="w-4 h-4" />
-                  Dengarkan
+                  listen
                 </button>
               </div>
             </div>
