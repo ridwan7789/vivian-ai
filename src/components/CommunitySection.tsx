@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, MessageCircle } from 'lucide-react';
 import vivianFull from '@/assets/vivian-full.jpg';
 
 const socials = [
@@ -10,7 +10,7 @@ const socials = [
   },
   {
     name: "Telegram",
-    icon: "✈️",
+    icon: MessageCircle,
     href: "https://t.me/vivianpump",
     description: "Join the family",
   },
@@ -26,8 +26,8 @@ const CommunitySection = () => {
             <div className="relative">
               {/* Glow */}
               <div className="absolute inset-0 bg-vivian-pink/20 blur-[60px] rounded-full scale-110" />
-              
-              <img 
+
+              <img
                 src={vivianFull}
                 alt="Vivian full illustration"
                 className="relative z-10 w-72 md:w-80 h-auto object-contain animate-float"
@@ -40,14 +40,14 @@ const CommunitySection = () => {
             <span className="text-vivian-gold font-fantasy text-sm tracking-[0.3em] uppercase mb-4 block">
               Join Us
             </span>
-            
+
             <h2 className="font-fantasy text-4xl md:text-5xl lg:text-6xl mb-6 text-glow">
               <span className="text-gradient-vivian">Community</span>
             </h2>
 
             <p className="text-foreground/80 text-lg leading-relaxed mb-10">
-              Vivian's world grows stronger with every soul who joins. 
-              Become part of a family that believes in magic, connection, 
+              Vivian's world grows stronger with every soul who joins.
+              Become part of a family that believes in magic, connection,
               and the power of staying together.
             </p>
 
@@ -59,7 +59,9 @@ const CommunitySection = () => {
                   href={social.href}
                   className="group magical-card flex items-center gap-4 px-6 py-4 hover:border-vivian-lavender/50 transition-all duration-300 hover:-translate-y-1"
                 >
-                  <span className="text-2xl">{social.icon}</span>
+                  <span className="text-2xl">
+                    {typeof social.icon === 'string' ? social.icon : <social.icon className="w-6 h-6" />}
+                  </span>
                   <div className="text-left">
                     <p className="font-fantasy text-foreground group-hover:text-vivian-lavender transition-colors">
                       {social.name}
