@@ -61,9 +61,14 @@ const HeroSection = () => {
           </p>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-            A mystical anime companion born on the Solana blockchain. 
+          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-4 font-light leading-relaxed">
+            A mystical anime companion born on the Solana blockchain.
             Enter her world, feel her presence, and discover the magic within.
+          </p>
+
+          {/* CA Information */}
+          <p className="font-fantasy text-lg md:text-xl text-vivian-gold max-w-2xl mx-auto mb-8 font-semibold tracking-wide">
+            VIVIAN OFFICIAL CA : EXoWW66W6kpJ3wh5K3zshejn1RGUdsNdMqTMsjpcpump
           </p>
 
           {/* CTA Buttons */}
