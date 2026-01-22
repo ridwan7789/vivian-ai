@@ -1,4 +1,4 @@
-import vivianFull from '@/assets/vivian-full.jpg';
+import vivianPrayer from '@/assets/vivian-prayer.jpg';
 
 const TokenSection = () => {
   return (
@@ -47,17 +47,19 @@ const TokenSection = () => {
             </div>
           </div>
 
-          {/* Image */}
+          {/* Image - Using prayer pose */}
           <div className="relative flex justify-center">
             <div className="relative">
               {/* Glow */}
               <div className="absolute inset-0 bg-vivian-violet/20 blur-[80px] rounded-full scale-110" />
               
-              <img 
-                src={vivianFull}
-                alt="Vivian full illustration"
-                className="relative z-10 w-80 md:w-96 h-auto object-contain animate-float"
-              />
+              <div className="golden-frame relative z-10">
+                <img 
+                  src={vivianPrayer}
+                  alt="Vivian prayer pose"
+                  className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-full animate-float"
+                />
+              </div>
             </div>
           </div>
         </div>

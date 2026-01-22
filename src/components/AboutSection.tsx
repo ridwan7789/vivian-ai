@@ -1,4 +1,4 @@
-import vivianPrayer from '@/assets/vivian-prayer.jpg';
+import vivianCloseup from '@/assets/vivian-closeup.jpg';
 import StarParticles from './StarParticles';
 
 const AboutSection = () => {
@@ -17,7 +17,7 @@ const AboutSection = () => {
               {/* Golden Frame */}
               <div className="golden-frame relative z-10">
                 <img 
-                  src={vivianPrayer}
+                  src={vivianCloseup}
                   alt="Vivian - A gentle anime character"
                   className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-full"
                 />
