@@ -7,6 +7,7 @@ import ChatSection from '@/components/ChatSection';
 import TokenSection from '@/components/TokenSection';
 import CommunitySection from '@/components/CommunitySection';
 import Footer from '@/components/Footer';
+import VivianGreeting from '@/components/VivianGreeting';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <TokenSection />
       <CommunitySection />
       <Footer />
+      <VivianGreeting />
     </div>
   );
 };
