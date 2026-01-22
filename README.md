@@ -4,6 +4,8 @@
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
+**Token CA**: EXoWW66W6kpJ3wh5K3zshejn1RGUdsNdMqTMsjpcpump
+
 ## How can I edit this code?
 
 There are several ways of editing your application.

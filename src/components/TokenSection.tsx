@@ -23,9 +23,9 @@ const TokenSection = () => {
 
             <div className="space-y-4">
               <div className="magical-card inline-block">
-                <p className="font-fantasy text-sm text-vivian-gold mb-1">Contract Address</p>
+                <p className="font-fantasy text-sm text-vivian-gold mb-1">VIVIAN CA: EXoWW66W6kpJ3wh5K3zshejn1RGUdsNdMqTMsjpcpump</p>
                 <p className="font-mono text-xs text-foreground/60 break-all">
-                  Coming soon on Solana ✨
+                  VIVIAN LAUNCH ON PUMPFUN ✨
                 </p>
               </div>
             </div>
