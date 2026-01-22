@@ -138,7 +138,7 @@ const VivianGreeting = () => {
                   <span className="w-1.5 h-4 bg-vivian-lavender rounded-full animate-typing" style={{ animationDelay: '0.15s' }} />
                   <span className="w-1.5 h-4 bg-vivian-lavender rounded-full animate-typing" style={{ animationDelay: '0.3s' }} />
                 </div>
-                <span className="text-sm text-vivian-lavender">Vivian berbicara...</span>
+                <span className="text-sm text-vivian-lavender">Vivian spoke...</span>
               </div>
             </div>
           </motion.div>
