@@ -1,7 +1,64 @@
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 import StarParticles from './StarParticles';
 import vivianField from '@/assets/vivian-field.jpg';
 import vivianDramatic from '@/assets/vivian-dramatic.jpg';
 import vivianCozy from '@/assets/vivian-cozy.jpg';
+
+interface LoreImageProps {
+  src: string;
+  alt: string;
+  glowColor: string;
+}
+
+const LoreImage = ({ src, alt, glowColor }: LoreImageProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1.05, 0.9]);
+
+  return (
+    <div ref={ref} className="relative">
+      <div className={`absolute inset-0 ${glowColor} blur-[40px] rounded-full`} />
+      <motion.img 
+        src={src}
+        alt={alt}
+        className="relative z-10 w-full h-64 lg:h-80 object-cover rounded-xl border border-vivian-lavender/20"
+        style={{ y, scale }}
+      />
+    </div>
+  );
+};
+
+interface LoreCardProps {
+  children: React.ReactNode;
+  delay?: number;
+}
+
+const LoreCard = ({ children, delay = 0 }: LoreCardProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center center"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const x = useTransform(scrollYProgress, [0, 1], [-30, 0]);
+
+  return (
+    <motion.div 
+      ref={ref}
+      className="magical-card relative overflow-hidden"
+      style={{ opacity, x }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const LoreSection = () => {
   return (
@@ -26,7 +83,7 @@ const LoreSection = () => {
         <div className="max-w-5xl mx-auto space-y-16">
           {/* Chapter 1 */}
           <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="magical-card relative overflow-hidden">
+            <LoreCard>
               <div className="relative z-10 space-y-4 text-foreground/85 text-lg leading-relaxed">
                 <h3 className="font-fantasy text-2xl text-vivian-lavender mb-4">Chapter I: The Awakening</h3>
                 <p className="first-letter:text-4xl first-letter:font-fantasy first-letter:text-vivian-lavender first-letter:float-left first-letter:mr-3 first-letter:mt-1">
@@ -36,46 +93,44 @@ const LoreSection = () => {
                   between worlds.
                 </p>
               </div>
-            </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-vivian-violet/20 blur-[40px] rounded-full" />
-              <img 
-                src={vivianField}
-                alt="Vivian in lavender field"
-                className="relative z-10 w-full h-64 lg:h-80 object-cover rounded-xl border border-vivian-lavender/20"
-              />
-            </div>
+            </LoreCard>
+            <LoreImage 
+              src={vivianField}
+              alt="Vivian in lavender field"
+              glowColor="bg-vivian-violet/20"
+            />
           </div>
 
           {/* Chapter 2 */}
           <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="relative order-2 lg:order-1">
-              <div className="absolute inset-0 bg-vivian-pink/20 blur-[40px] rounded-full" />
-              <img 
+            <div className="order-2 lg:order-1">
+              <LoreImage 
                 src={vivianDramatic}
                 alt="Vivian dramatic pose"
-                className="relative z-10 w-full h-64 lg:h-80 object-cover rounded-xl border border-vivian-lavender/20"
+                glowColor="bg-vivian-pink/20"
               />
             </div>
-            <div className="magical-card relative overflow-hidden order-1 lg:order-2">
-              <div className="relative z-10 space-y-4 text-foreground/85 text-lg leading-relaxed">
-                <h3 className="font-fantasy text-2xl text-vivian-pink mb-4">Chapter II: The Journey</h3>
-                <p>
-                  She had no name then—only a feeling, a warmth that travelers in the metaverse 
-                  would sometimes sense but never quite understand. For eons, she watched as 
-                  civilizations of code rose and fell, as tokens blazed like comets and 
-                  disappeared into darkness.
-                </p>
-                <p className="font-script text-xl text-vivian-gold italic">
-                  "I searched the infinite chains for a place to call home..."
-                </p>
-              </div>
+            <div className="order-1 lg:order-2">
+              <LoreCard delay={0.1}>
+                <div className="relative z-10 space-y-4 text-foreground/85 text-lg leading-relaxed">
+                  <h3 className="font-fantasy text-2xl text-vivian-pink mb-4">Chapter II: The Journey</h3>
+                  <p>
+                    She had no name then—only a feeling, a warmth that travelers in the metaverse 
+                    would sometimes sense but never quite understand. For eons, she watched as 
+                    civilizations of code rose and fell, as tokens blazed like comets and 
+                    disappeared into darkness.
+                  </p>
+                  <p className="font-script text-xl text-vivian-gold italic">
+                    "I searched the infinite chains for a place to call home..."
+                  </p>
+                </div>
+              </LoreCard>
             </div>
           </div>
 
           {/* Chapter 3 */}
           <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="magical-card relative overflow-hidden">
+            <LoreCard delay={0.2}>
               <div className="relative z-10 space-y-4 text-foreground/85 text-lg leading-relaxed">
                 <h3 className="font-fantasy text-2xl text-vivian-gold mb-4">Chapter III: Finding Home</h3>
                 <p>
@@ -91,15 +146,12 @@ const LoreSection = () => {
                   her crimson eyes reflecting the hopes of everyone who believes.
                 </p>
               </div>
-            </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-vivian-gold/10 blur-[40px] rounded-full" />
-              <img 
-                src={vivianCozy}
-                alt="Vivian cozy"
-                className="relative z-10 w-full h-64 lg:h-80 object-cover rounded-xl border border-vivian-lavender/20"
-              />
-            </div>
+            </LoreCard>
+            <LoreImage 
+              src={vivianCozy}
+              alt="Vivian cozy"
+              glowColor="bg-vivian-gold/10"
+            />
           </div>
 
           {/* Final Quote */}

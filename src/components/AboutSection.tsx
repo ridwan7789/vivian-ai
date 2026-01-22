@@ -1,16 +1,24 @@
+import { motion } from 'framer-motion';
+import { useParallax, useFadeIn } from '@/hooks/useParallax';
 import vivianCloseup from '@/assets/vivian-closeup.jpg';
 import StarParticles from './StarParticles';
 
 const AboutSection = () => {
+  const { ref: imageRef, y: imageY, scale: imageScale } = useParallax({ speed: 0.4 });
+  const { ref: contentRef, opacity: contentOpacity, y: contentY } = useFadeIn();
+
   return (
     <section id="about" className="relative py-24 md:py-32 overflow-hidden">
       <StarParticles count={30} />
       
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
-          <div className="relative order-2 lg:order-1 flex justify-center">
-            <div className="relative">
+          {/* Image with Parallax */}
+          <div ref={imageRef} className="relative order-2 lg:order-1 flex justify-center">
+            <motion.div 
+              className="relative"
+              style={{ y: imageY, scale: imageScale }}
+            >
               {/* Glow behind image */}
               <div className="absolute inset-0 bg-vivian-violet/30 blur-[60px] rounded-full scale-110" />
               
@@ -26,11 +34,15 @@ const AboutSection = () => {
               {/* Floating decorative elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-vivian-gold/80 rounded-full blur-sm animate-float" />
               <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-vivian-pink/60 rounded-full blur-sm animate-float-delayed" />
-            </div>
+            </motion.div>
           </div>
 
-          {/* Content */}
-          <div className="order-1 lg:order-2 text-center lg:text-left">
+          {/* Content with Fade In */}
+          <motion.div 
+            ref={contentRef}
+            className="order-1 lg:order-2 text-center lg:text-left"
+            style={{ opacity: contentOpacity, y: contentY }}
+          >
             <span className="text-vivian-gold font-fantasy text-sm tracking-[0.3em] uppercase mb-4 block">
               Who is She?
             </span>
@@ -57,7 +69,7 @@ const AboutSection = () => {
                 "I am always here... you just need to look for me."
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
