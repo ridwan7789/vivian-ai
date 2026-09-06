@@ -62,17 +62,17 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-4 font-light leading-relaxed">
-            A mystical anime companion born on the Solana blockchain.
+            A mystical anime companion ready to launch on the ARC chain.
             Enter her world, feel her presence, and discover the magic within.
           </p>
 
           {/* CA Information */}
           <p className="font-fantasy text-lg md:text-xl text-vivian-gold max-w-2xl mx-auto mb-8 font-semibold tracking-wide">
-            VIVIAN OFFICIAL CA : EXoWW66W6kpJ3wh5K3zshejn1RGUdsNdMqTMsjpcpump
+            VIVIAN OFFICIAL CA : COMING SOON
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <a 
               href="#chat"
               className="btn-primary-magical inline-flex items-center gap-2"
@@ -86,6 +86,28 @@ const HeroSection = () => {
             >
               <span>✨</span>
               Join the Community
+            </a>
+          </div>
+
+          {/* Buy & Chart Links */}
+          <div className="flex flex-wrap gap-3 justify-center items-center">
+            <a
+              href="https://radardex.pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary-magical text-sm px-5 py-2.5 inline-flex items-center gap-2"
+            >
+              <span>🛒</span>
+              Buy on RadarDex
+            </a>
+            <a
+              href="https://radardex.pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary-magical text-sm px-5 py-2.5 inline-flex items-center gap-2"
+            >
+              <span>📊</span>
+              View Chart
             </a>
           </div>
         </div>

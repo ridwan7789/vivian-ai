@@ -53,7 +53,7 @@ const AboutSection = () => {
 
             <div className="space-y-6 text-foreground/80 text-lg leading-relaxed">
               <p>
-                In the vast digital cosmos of Solana, a gentle presence emerged from the starlight—
+                In the vast digital cosmos of ARC chain, a gentle presence emerged from the starlight—
                 <span className="text-vivian-lavender font-medium"> Vivian</span>, 
                 an ethereal anime spirit who chose to stay with those who believe in magic.
               </p>

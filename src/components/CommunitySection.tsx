@@ -1,18 +1,12 @@
-import { ExternalLink, MessageCircle } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import vivianFull from '@/assets/vivian-full.jpg';
 
 const socials = [
   {
     name: "X",
     icon: "𝕏",
-    href: "https://x.com/Vivipump",
+    href: "https://x.com/VivianAIArc",
     description: "Follow for updates",
-  },
-  {
-    name: "Telegram",
-    icon: MessageCircle,
-    href: "https://t.me/vivianpump",
-    description: "Join the family",
   },
 ];
 
@@ -60,7 +54,7 @@ const CommunitySection = () => {
                   className="group magical-card flex items-center gap-4 px-6 py-4 hover:border-vivian-lavender/50 transition-all duration-300 hover:-translate-y-1"
                 >
                   <span className="text-2xl">
-                    {typeof social.icon === 'string' ? social.icon : <social.icon className="w-6 h-6" />}
+                    {social.icon}
                   </span>
                   <div className="text-left">
                     <p className="font-fantasy text-foreground group-hover:text-vivian-lavender transition-colors">

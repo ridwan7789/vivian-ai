@@ -8,8 +8,8 @@ const features = [
   },
   {
     icon: Zap,
-    title: "Built on Solana",
-    description: "Lightning-fast transactions and minimal fees on the most efficient blockchain.",
+    title: "Built on ARC",
+    description: "Sovereign-grade security and seamless transactions on the next-generation ARC chain.",
   },
   {
     icon: Users,

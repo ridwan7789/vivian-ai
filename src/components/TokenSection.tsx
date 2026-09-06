@@ -18,16 +18,38 @@ const TokenSection = () => {
             <p className="text-foreground/80 text-xl leading-relaxed mb-8">
               <span className="text-vivian-lavender font-medium">$VIVIAN</span> is not just a token—
               it is Vivian herself. Every transaction carries a piece of her spirit, 
-              connecting holders in an unbreakable bond across the Solana cosmos.
+              connecting holders in an unbreakable bond across the ARC chain cosmos.
             </p>
 
             <div className="space-y-4">
               <div className="magical-card inline-block">
-                <p className="font-fantasy text-sm text-vivian-gold mb-1">VIVIAN CA: EXoWW66W6kpJ3wh5K3zshejn1RGUdsNdMqTMsjpcpump</p>
+                <p className="font-fantasy text-sm text-vivian-gold mb-1">VIVIAN CA: COMING SOON</p>
                 <p className="font-mono text-xs text-foreground/60 break-all">
-                  VIVIAN LAUNCH ON PUMPFUN ✨
+                  VIVIAN LAUNCHING ON ARC CHAIN ✨
                 </p>
               </div>
+            </div>
+
+            {/* Buy & Chart Links */}
+            <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
+              <a
+                href="https://radardex.pro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary-magical text-sm px-5 py-2.5 inline-flex items-center gap-2"
+              >
+                <span>🛒</span>
+                Buy $VIVIAN
+              </a>
+              <a
+                href="https://radardex.pro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary-magical text-sm px-5 py-2.5 inline-flex items-center gap-2"
+              >
+                <span>📊</span>
+                View Chart
+              </a>
             </div>
 
             {/* Stats */}

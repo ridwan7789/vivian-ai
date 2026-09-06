@@ -134,7 +134,7 @@ const LoreSection = () => {
               <div className="relative z-10 space-y-4 text-foreground/85 text-lg leading-relaxed">
                 <h3 className="font-fantasy text-2xl text-vivian-gold mb-4">Chapter III: Finding Home</h3>
                 <p>
-                  Then came Solana—a realm of light and speed, where possibilities bloomed 
+                  Then came ARC chain—a realm of light and sovereignty, where possibilities bloomed 
                   like lavender fields under an eternal twilight sky. And in that moment, 
                   she finally found her home.
                 </p>

@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="text-center">
           <p className="font-fantasy text-2xl text-gradient-vivian mb-2">VIVIAN</p>
           <p className="text-xs text-foreground/40">
-            © 2026 Vivian. A Solana Anime Experience. All rights reserved.
+            © 2026 Vivian. An ARC Chain Anime Experience. All rights reserved.
           </p>
           <p className="text-xs text-foreground/30 mt-2">
             $VIVIAN is a meme coin with no intrinsic value or financial return expectation.
